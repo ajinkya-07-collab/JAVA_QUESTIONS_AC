@@ -13,9 +13,9 @@ public class fibonacci {
             for (int i = 2; i <= n; i++) {
                 System.err.print(b + " ");
 
-                int temp = b;
-                b = a + b;
-                a = temp;
+                int temp = b; // without temp
+                b = a + b; // b = a+b;
+                a = temp; // a = b-a;
             }
         }
     }
