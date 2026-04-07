@@ -1,0 +1,28 @@
+package ARRAY_I;
+
+public class LargestInArray {
+
+    public static int getLargest(int arr[]) {
+        int largest = Integer.MIN_VALUE;// - infinity --possible lowest instead of 0
+        int smallest = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+            if (arr[i] < smallest) {
+                smallest = arr[i];
+            }
+
+        }
+        System.out.println("Smallest Value in array is = " + smallest);
+        return largest;
+    }
+
+    public static void main(String[] args) {
+
+        int arr[] = { 1, 2, 6, 3, 5 };
+
+        System.out.println("Largest value in array is = " + getLargest(arr));
+    }
+}
