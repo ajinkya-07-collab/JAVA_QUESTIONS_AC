@@ -22,13 +22,14 @@ public class LaptopCharge {
         // String line = sc.nextLine();
 
         String line = "23671";
-        // String[] parts = line.split("");
-        int[] arr = new int[line.length()];
+        String[] parts = line.split("");
+        int[] arr = new int[parts.length];
 
         int minCharge = 5;
 
-        for (int i = 0; i < line.length(); i++) {
-            arr[i] = line.charAt(i) - '0';
+        for (int i = 0; i < parts.length; i++) {
+            // arr[i] = line.charAt(i) - '0';
+            arr[i] = Integer.parseInt(parts[i]);
         }
 
         System.out.println(laptopCount(arr, minCharge));
