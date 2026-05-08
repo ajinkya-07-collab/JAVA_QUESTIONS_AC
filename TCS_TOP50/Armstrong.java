@@ -8,20 +8,20 @@ public class Armstrong {
 
         int originalNum = num;
 
-        int digits = 0;
+        int digitsCount = 0;
         int sum = 0;
 
         int temp = num;
 
         while (temp != 0) {
-            digits++;
+            digitsCount++;
             temp /= 10;
         }
 
         temp = num;
         while (temp != 0) {
             int digit = temp % 10;
-            sum += Math.pow(digit, digits);
+            sum += Math.pow(digit, digitsCount);
             temp /= 10;
         }
         return (originalNum == sum);
